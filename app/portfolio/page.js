@@ -9,30 +9,51 @@ export const metadata = {
 const projects = [
     {
         id: 1,
-        client: 'FinTech Corp',
-        category: 'Finance',
-        result: '+40% Retention',
-        theme: 'dark' // Navy
+        client: 'Urban LD',
+        category: 'Urban Planning',
+        link: 'https://urbanld.com/',
+        theme: 'dark'
     },
     {
         id: 2,
-        client: 'HealthyLife',
-        category: 'Healthcare',
-        result: '2x Traffic',
-        theme: 'lilac' // Lilac
+        client: 'Eco Lanka Food Processing',
+        category: 'Food Processing',
+        link: 'https://ecolankafp.lk/',
+        theme: 'lilac'
     },
     {
         id: 3,
-        client: 'EcoShop',
+        client: 'Captain Sports',
         category: 'E-commerce',
-        result: '2.5x Conv.',
-        theme: 'light' // White
+        link: 'http://captain-sports.com/',
+        theme: 'light'
     },
     {
         id: 4,
-        client: 'TechStart',
-        category: 'SaaS',
-        result: 'Series A',
+        client: 'Design Edit',
+        category: 'Interior Design',
+        link: 'https://designedit.lk/',
+        theme: 'dark'
+    },
+    {
+        id: 5,
+        client: 'Aditi Infinity',
+        category: 'E-commerce',
+        link: 'https://aditiinfinity.com/',
+        theme: 'lilac'
+    },
+    {
+        id: 6,
+        client: 'Lumos Integrated',
+        category: 'Renewable Energy',
+        link: 'https://lumosintegrated.com/',
+        theme: 'light'
+    },
+    {
+        id: 7,
+        client: 'Golden Bell Management',
+        category: 'Maritime Services',
+        link: 'https://goldenbellmanagement.com',
         theme: 'dark'
     }
 ];
@@ -51,7 +72,7 @@ export default function Portfolio() {
                 <div className="container">
                     <div className={styles.projectGrid}>
                         {projects.map((project) => (
-                            <div key={project.id} className={`${styles.projectCard} ${styles[project.theme]}`}>
+                            <Link href={project.link} key={project.id} target="_blank" className={`${styles.projectCard} ${styles[project.theme]}`}>
                                 <div className={styles.cardHeader}>
                                     <span className={styles.category}>{project.category}</span>
                                     <div className={styles.arrowIcon}>↗</div>
@@ -59,10 +80,10 @@ export default function Portfolio() {
                                 <div className={styles.cardContent}>
                                     <h2>{project.client}</h2>
                                     <div className={styles.resultBadge}>
-                                        {project.result}
+                                        Visit Site
                                     </div>
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                     </div>
 
