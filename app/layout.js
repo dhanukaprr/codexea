@@ -20,6 +20,10 @@ const jakarta = Plus_Jakarta_Sans({
 export const metadata = {
   title: "Codexea | Digital Marketing & Web Development",
   description: "Results-driven digital solutions specializing in Web Development, Digital Marketing, and UI/UX Design.",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function RootLayout({ children }) {
