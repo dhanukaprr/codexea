@@ -1,0 +1,63 @@
+.servicesPage {
+    background-color: var(--berry-red);
+    min-height: 100vh;
+}
+
+.headerSection {
+    padding: 120px 0 60px;
+    color: white;
+}
+
+.pageTitle {
+    font-size: 6rem;
+    line-height: 0.85;
+    margin-bottom: 40px;
+}
+
+.highlight {
+    /* Outline text effect or just bold color */
+    -webkit-text-stroke: 2px white;
+    color: transparent;
+    display: block;
+}
+
+.pageSubtitle {
+    font-size: 1.5rem;
+    max-width: 600px;
+    opacity: 0.9;
+    font-family: var(--font-body);
+}
+
+.servicesGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+.gridItemLarge {
+    grid-column: span 1;
+}
+
+.gridItemSmall {
+    grid-column: span 1;
+}
+
+.gridItemFull {
+    grid-column: span 2;
+}
+
+@media (max-width: 900px) {
+    .servicesGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .gridItemFull,
+    .gridItemLarge,
+    .gridItemSmall {
+        grid-column: span 1;
+    }
+
+    .pageTitle {
+        font-size: 4rem;
+    }
+}

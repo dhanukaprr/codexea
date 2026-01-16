@@ -1,0 +1,202 @@
+.hero {
+    background: var(--gradient-brand-red);
+    /* Updated to Brand Gradient */
+    color: var(--text-on-dark);
+    /* min-height: 100vh; Removed to reduce bottom space */
+    padding: 180px 0 60px;
+    /* Increased top padding, decreased bottom */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.navOverlay {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.brand {
+    font-family: var(--font-heading);
+    font-weight: 900;
+    font-size: 1.5rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.navLinks {
+    display: flex;
+    gap: 32px;
+}
+
+.navActions {
+    display: flex;
+    gap: 16px;
+}
+
+.btnSmall {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.btnSmallFilled {
+    background: white;
+    color: var(--berry-red);
+    border: none;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.mainContent {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.headline {
+    font-size: 8vw;
+    /* Fluid typography for massive scale */
+    line-height: 0.85;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-transform: uppercase;
+}
+
+.line {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.iconWrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 7vw;
+    height: 7vw;
+    background: transparent;
+}
+
+.inlineIcon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Rotate slightly for dynamic feel */
+    transform: rotate(-10deg);
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+}
+
+.statsBadge {
+    margin-left: auto;
+    background: #FF9E0B;
+    /* Orange/Yellow from reference */
+    color: #1a1a1a;
+    padding: 24px;
+    border-radius: 20px;
+    display: flex;
+    gap: 24px;
+    font-family: var(--font-body);
+}
+
+.statItem {
+    display: flex;
+    flex-direction: column;
+}
+
+.statItem strong {
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.statItem span {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    opacity: 0.7;
+}
+
+.footerRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.ctaBtn {
+    background: var(--white);
+    color: var(--berry-red);
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.2rem;
+    transition: transform 0.2s;
+}
+
+.ctaBtn:hover {
+    transform: scale(1.05);
+}
+
+.arrow {
+    background: var(--berry-red);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.subtext {
+    max-width: 500px;
+    font-size: 1rem;
+    line-height: 1.5;
+    opacity: 0.8;
+    font-family: var(--font-body);
+}
+
+@media (max-width: 1024px) {
+    .headline {
+        font-size: 10vw;
+    }
+
+    .line {
+        flex-wrap: wrap;
+    }
+
+    .statsBadge {
+        display: none;
+        /* Hide complex badge on smaller screens for now */
+    }
+
+    .footerRow {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .navLinks {
+        display: none;
+    }
+}

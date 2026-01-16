@@ -1,0 +1,91 @@
+.footer {
+    background-color: var(--white);
+    padding-top: 80px;
+    border-top: 1px solid var(--medium-grey);
+}
+
+.footerContainer {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 60px;
+}
+
+.column h3 {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary-blue);
+    display: block;
+    margin-bottom: 20px;
+}
+
+.description {
+    color: var(--dark-grey);
+    font-size: 0.95rem;
+    max-width: 300px;
+}
+
+.links {
+    list-style: none;
+}
+
+.links li {
+    margin-bottom: 12px;
+}
+
+.socials {
+    display: flex;
+    gap: 24px;
+    /* Explicit gap between FB and IG */
+    margin-top: 16px;
+}
+
+.socials a {
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    color: var(--dark-grey);
+    /* Changed text color to dark */
+}
+
+.socials a:hover {
+    color: var(--primary-blue);
+}
+
+.column p {
+    color: var(--deep-navy);
+    /* Fixed contrast: dark text on white bg */
+    margin-bottom: 12px;
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+.links a {
+    color: var(--dark-grey);
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.links a:hover {
+    color: var(--primary-blue);
+}
+
+.copyright {
+    background-color: var(--light-grey);
+    padding: 24px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--dark-grey);
+}
+
+@media (max-width: 768px) {
+    .footerContainer {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}

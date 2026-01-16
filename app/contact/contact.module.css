@@ -1,0 +1,125 @@
+.contactPage {
+    min-height: 100vh;
+    background-color: var(--berry-red);
+    color: white;
+}
+
+.splitLayout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+}
+
+.textColumn {
+    padding: 100px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.textColumn h1 {
+    font-size: 8rem;
+    line-height: 0.85;
+    margin-bottom: 40px;
+}
+
+.textColumn p {
+    font-size: 1.5rem;
+    font-family: var(--font-body);
+    opacity: 0.9;
+}
+
+.contactDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    /* Added gap for spacing */
+    margin-bottom: 40px;
+}
+
+.detailItem {
+    font-size: 1.25rem;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+.socialLinks {
+    display: flex;
+    gap: 20px;
+    /* Separated FB and IG */
+}
+
+.socialLink {
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.formColumn {
+    background-color: var(--off-white);
+    padding: 100px 60px;
+    display: flex;
+    align-items: center;
+    color: var(--deep-navy);
+}
+
+.form {
+    width: 100%;
+    max-width: 500px;
+}
+
+.inputGroup {
+    margin-bottom: 30px;
+}
+
+.inputGroup label {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+.inputGroup input,
+.inputGroup textarea {
+    width: 100%;
+    padding: 20px;
+    background: white;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: var(--font-body);
+}
+
+.submitBtn {
+    background-color: var(--berry-red);
+    color: white;
+    width: 100%;
+    padding: 20px;
+    border-radius: 50px;
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 800;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.submitBtn:hover {
+    opacity: 0.9;
+}
+
+@media (max-width: 900px) {
+    .splitLayout {
+        grid-template-columns: 1fr;
+    }
+
+    .textColumn h1 {
+        font-size: 5rem;
+    }
+
+    .formColumn {
+        padding: 60px 20px;
+    }
+}

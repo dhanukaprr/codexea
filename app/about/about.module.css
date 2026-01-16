@@ -1,0 +1,103 @@
+.aboutPage {
+    background-color: white;
+}
+
+.hero {
+    background-color: var(--deep-navy);
+    padding: 140px 0 100px;
+    color: white;
+}
+
+.heroTitle {
+    font-size: 8rem;
+    line-height: 0.8;
+}
+
+.contentSection {
+    padding: 100px 0;
+}
+
+.missionBox {
+    max-width: 900px;
+    margin-bottom: 100px;
+}
+
+.missionBox h2 {
+    font-size: 3.5rem;
+    color: var(--deep-navy);
+    margin-bottom: 30px;
+}
+
+.redText {
+    color: var(--berry-red);
+}
+
+.divider {
+    width: 100px;
+    height: 8px;
+    background-color: var(--berry-red);
+    margin-bottom: 30px;
+}
+
+.missionBox p {
+    font-size: 1.5rem;
+    font-family: var(--font-body);
+    line-height: 1.6;
+}
+
+.teamGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+.teamCard {
+    border-radius: var(--radius);
+    /* 24px */
+    padding: 40px;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    color: white;
+    /* Default to white for dark backgrounds */
+}
+
+.teamCard h3 {
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+}
+
+.teamCard span {
+    font-family: var(--font-body);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+}
+
+.navy {
+    background-color: var(--deep-navy);
+}
+
+.lilac {
+    background-color: var(--vibrant-lilac);
+    color: var(--deep-navy) !important;
+}
+
+.red {
+    background-color: var(--berry-red);
+}
+
+@media (max-width: 768px) {
+    .heroTitle {
+        font-size: 4rem;
+    }
+
+    .teamGrid {
+        grid-template-columns: 1fr;
+    }
+}

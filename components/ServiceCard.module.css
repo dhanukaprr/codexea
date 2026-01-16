@@ -1,0 +1,76 @@
+.card {
+    padding: 40px;
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px) rotate(1deg);
+}
+
+/* THEMES */
+.dark {
+    background-color: var(--deep-navy);
+    color: white;
+}
+
+.light {
+    background-color: var(--off-white);
+    color: var(--text-on-light);
+}
+
+.lilac {
+    background-color: var(--vibrant-lilac);
+    color: var(--deep-navy);
+}
+
+.white {
+    background-color: white;
+    color: var(--deep-navy);
+    border: 1px solid #eee;
+}
+
+.title {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    line-height: 0.9;
+}
+
+.description {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    flex-grow: 1;
+    opacity: 0.9;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.topIcon {
+    font-family: var(--font-body);
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Pseudo-element for that creative 'tab' or 'tail' shape seen in reference if needed
+   For now, we keep it simple rounded, as the masking is complex css */

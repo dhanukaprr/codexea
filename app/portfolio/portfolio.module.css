@@ -1,0 +1,151 @@
+.portfolioPage {
+    background-color: var(--off-white);
+    min-height: 100vh;
+}
+
+.headerSection {
+    background-color: var(--berry-red);
+    padding: 120px 0 100px;
+    color: white;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+}
+
+.pageTitle {
+    font-size: 7rem;
+    line-height: 0.9;
+    margin-bottom: 20px;
+}
+
+.pageSubtitle {
+    font-size: 1.5rem;
+    opacity: 0.9;
+    font-family: var(--font-body);
+}
+
+.projectGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    margin-top: -80px;
+    /* Overlap effect */
+    margin-bottom: 80px;
+}
+
+.projectCard {
+    border-radius: var(--radius-lg);
+    padding: 40px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+}
+
+.projectCard:hover {
+    transform: translateY(-10px);
+}
+
+/* Themes matching ServiceCard logic */
+.dark {
+    background-color: var(--deep-navy);
+    color: white;
+}
+
+.lilac {
+    background-color: var(--vibrant-lilac);
+    color: var(--deep-navy);
+}
+
+.light {
+    background-color: white;
+    color: var(--deep-navy);
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.category {
+    font-family: var(--font-body);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.9rem;
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+.arrowIcon {
+    font-size: 1.5rem;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardContent h2 {
+    font-size: 3rem;
+    margin-bottom: 24px;
+}
+
+.resultBadge {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 1.2rem;
+    backdrop-filter: blur(10px);
+}
+
+.lilac .resultBadge {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.light .resultBadge {
+    background: #eee;
+}
+
+.ctaBox {
+    text-align: center;
+    padding: 100px 0;
+    background: var(--deep-navy);
+    border-radius: var(--radius-lg);
+    color: white;
+}
+
+.ctaBox h2 {
+    font-size: 4rem;
+    margin-bottom: 40px;
+}
+
+.roundBtn {
+    display: inline-flex;
+    padding: 24px 48px;
+    background: var(--berry-red);
+    color: white;
+    border-radius: 100px;
+    font-weight: 800;
+    font-size: 1.5rem;
+    transition: transform 0.2s ease;
+}
+
+.roundBtn:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 900px) {
+    .projectGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .pageTitle {
+        font-size: 4rem;
+    }
+}
