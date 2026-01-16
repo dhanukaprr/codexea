@@ -1,7 +1,9 @@
 import Link from 'next/link';
 import Hero from '@/components/Hero';
 import ServiceCard from '@/components/ServiceCard';
+import ProjectCard from '@/components/ProjectCard'; // Import ProjectCard
 import ClientCarousel from '@/components/ClientCarousel';
+import { projects } from '@/app/data/projects'; // Import projects data
 import styles from './home.module.css';
 
 export default function Home() {
@@ -95,8 +97,19 @@ export default function Home() {
       {/* Portfolio Teaser - keeping it consistent with new red styles */}
       <section className={styles.workSection}>
         <div className="container">
-          <h2 className={styles.workTitle}>Explore our most <br /> successful project</h2>
-          {/* ... keeping simplified for now ... */}
+          <h2 className={styles.workTitle}>EXPLORE OUR MOST <br /> SUCCESSFUL PROJECT</h2>
+
+          <div className={styles.workGrid}>
+            {projects.slice(0, 3).map((project) => (
+              <ProjectCard key={project.id} {...project} />
+            ))}
+          </div>
+
+          <div className={styles.workLinkContainer}>
+            <Link href="/portfolio" className={styles.workLink}>
+              See all work <span>→</span>
+            </Link>
+          </div>
         </div>
       </section>
 

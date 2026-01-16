@@ -115,7 +115,43 @@
 .workTitle {
     font-size: 3.5rem;
     color: var(--deep-navy);
-    margin-bottom: 40px;
+    margin-bottom: 60px;
+}
+
+.workGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-bottom: 60px;
+}
+
+.workLinkContainer {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.workLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--deep-navy);
+    text-decoration: none;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--berry-red);
+    transition: all 0.3s ease;
+}
+
+.workLink:hover {
+    gap: 15px;
+    color: var(--berry-red);
+}
+
+@media (max-width: 900px) {
+    .workGrid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 900px) {
