@@ -15,10 +15,12 @@ const Footer = () => {
                 <div className={styles.column}>
                     <h3>Services</h3>
                     <ul className={styles.links}>
-                        <li><Link href="/services#web-dev">Web Development</Link></li>
-                        <li><Link href="/services#digital-marketing">Digital Marketing</Link></li>
-                        <li><Link href="/services#ui-ux">UI/UX Design</Link></li>
-                        <li><Link href="/services#seo">SEO & Analytics</Link></li>
+                        <li><Link href="/services/web-development">Web Design & Development</Link></li>
+                        <li><Link href="/services/social-media">Social Media Marketing</Link></li>
+                        <li><Link href="/services/graphic-design">Graphic Design</Link></li>
+                        <li><Link href="/services/seo">Search Engine Optimization</Link></li>
+                        <li><Link href="/services/business-automation">Business Automation</Link></li>
+                        <li><Link href="/services/content-writing">Content Writing</Link></li>
                     </ul>
                 </div>
 
@@ -28,7 +30,6 @@ const Footer = () => {
                         <li><Link href="/about">About Us</Link></li>
                         <li><Link href="/portfolio">Portfolio</Link></li>
                         <li><Link href="/contact">Contact</Link></li>
-                        <li><Link href="/privacy">Privacy Policy</Link></li>
                     </ul>
                 </div>
 
