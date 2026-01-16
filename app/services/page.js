@@ -9,39 +9,46 @@ export const metadata = {
 
 const servicesData = [
     {
-        id: 'web-dev',
-        title: 'Web Develop',
-        description: 'Custom websites built with modern technologies for speed.',
-        theme: 'dark', // Navy
-        link: '#web-dev'
-    },
-    {
-        id: 'digital-marketing',
-        title: 'Digital Marketing',
-        description: 'SEO, SEM, and social media strategies designed to increase visibility.',
-        theme: 'lilac',
-        link: '#marketing'
-    },
-    {
-        id: 'ui-ux',
-        title: 'UI/UX Design',
-        description: 'User-centric designs that look stunning and provide seamless experiences.',
-        theme: 'light', // White/Off-white for contrast
-        link: '#ui-ux'
-    },
-    {
-        id: 'branding',
-        title: 'Branding',
-        description: 'Build a memorable brand identity with professional logo design.',
+        id: 'web-development',
+        title: 'Web Design & Development',
+        description: 'The internet is the future. We would like to help our customers master the digital space with awesome websites!',
         theme: 'dark',
-        link: '#branding'
+        link: '#web-development'
+    },
+    {
+        id: 'social-media',
+        title: 'Social Media Marketing',
+        description: 'Be where the people are! Talk to them directly, through creatively created Social Media Content.',
+        theme: 'lilac',
+        link: '#social-media'
+    },
+    {
+        id: 'graphic-design',
+        title: 'Graphic Design',
+        description: 'Design is the way to speak to the heart. Capture the eye and the hearts of those who matter through great designs.',
+        theme: 'light',
+        link: '#graphic-design'
     },
     {
         id: 'seo',
-        title: 'SEO & Analytics',
-        description: 'Make informed decisions with deep insights and optimization.',
-        theme: 'lilac',
+        title: 'Search Engine Optimization',
+        description: 'Make of your websites to rank higher on Google Search Results! This will increase your visitors and sales.',
+        theme: 'dark',
         link: '#seo'
+    },
+    {
+        id: 'business-automation',
+        title: 'Business Automation',
+        description: 'Get rid of costly hiring and outsourcing of work! Easily do them yourself with our automation services.',
+        theme: 'lilac',
+        link: '#business-automation'
+    },
+    {
+        id: 'content-writing',
+        title: 'Content Writing',
+        description: 'Good content should be simple and powerful enough to drive the point home. We will help you reach the right audience in the right way.',
+        theme: 'light',
+        link: '#content-writing'
     }
 ];
 
@@ -66,8 +73,6 @@ export default function Services() {
                 <div className="container">
                     <div className={styles.servicesGrid}>
 
-                        {/* Custom Layout for grid */}
-
                         {/* Row 1 */}
                         <div className={styles.gridItemLarge}>
                             <ServiceCard {...servicesData[0]} />
@@ -86,15 +91,15 @@ export default function Services() {
                             <ServiceCard {...servicesData[3]} />
                         </div>
 
-                        {/* Row 3 - Full Width */}
-                        <div className={styles.gridItemFull}>
-                            <ServiceCard
-                                title="SEO & Analytics"
-                                description="We don't just guess. We track, analyze, and optimize every single interaction."
-                                theme="lilac"
-                                link="#seo"
-                            />
+                        {/* Row 3 */}
+                        <div className={styles.gridItemLarge}>
+                            <ServiceCard {...servicesData[4]} />
                         </div>
+
+                        <div className={styles.gridItemSmall}>
+                            <ServiceCard {...servicesData[5]} />
+                        </div>
+
                     </div>
                 </div>
             </section>
