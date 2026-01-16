@@ -115,17 +115,6 @@
   box-shadow: 0 12px 40px #0000001f, inset 0 0 0 1px #00000008;
 }
 
-.Navbar-module__nuAbfa__contactNav {
-  -webkit-backdrop-filter: blur(50px) saturate(200%);
-  color: var(--deep-navy);
-  background: #ffffff1a;
-  box-shadow: 0 10px 40px #0000001a, inset 0 0 0 1px #fff3;
-}
-
-.Navbar-module__nuAbfa__contactNav .Navbar-module__nuAbfa__logo, .Navbar-module__nuAbfa__contactNav .Navbar-module__nuAbfa__link {
-  mix-blend-mode: normal;
-}
-
 .Navbar-module__nuAbfa__container {
   justify-content: space-between;
   align-items: center;

@@ -32,21 +32,7 @@
         inset 0 0 0 1px rgba(0, 0, 0, 0.03);
 }
 
-/* Contact Page Specific */
-.contactNav {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(50px) saturate(200%);
-    -webkit-backdrop-filter: blur(50px) saturate(200%);
-    box-shadow:
-        0 10px 40px rgba(0, 0, 0, 0.1),
-        inset 0 0 0 1px rgba(255, 255, 255, 0.2);
-    color: var(--deep-navy);
-}
-
-.contactNav .logo,
-.contactNav .link {
-    mix-blend-mode: normal;
-}
+/* Contact Page Specific styles removed */
 
 .container {
     display: flex;

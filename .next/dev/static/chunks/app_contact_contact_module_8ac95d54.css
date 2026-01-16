@@ -1,0 +1,125 @@
+/* [project]/app/contact/contact.module.css [app-client] (css) */
+.contact-module__xwJ-uq__contactPage {
+  background-color: var(--berry-red);
+  color: #fff;
+  min-height: 100vh;
+}
+
+.contact-module__xwJ-uq__splitLayout {
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  display: grid;
+}
+
+.contact-module__xwJ-uq__textColumn {
+  flex-direction: column;
+  justify-content: center;
+  padding: 100px 60px;
+  display: flex;
+}
+
+.contact-module__xwJ-uq__textColumn h1 {
+  margin-bottom: 40px;
+  font-size: 8rem;
+  line-height: .85;
+}
+
+.contact-module__xwJ-uq__textColumn p {
+  font-size: 1.5rem;
+  font-family: var(--font-body);
+  opacity: .9;
+}
+
+.contact-module__xwJ-uq__contactDetails {
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 40px;
+  display: flex;
+}
+
+.contact-module__xwJ-uq__detailItem {
+  opacity: .9;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.contact-module__xwJ-uq__socialLinks {
+  gap: 20px;
+  display: flex;
+}
+
+.contact-module__xwJ-uq__socialLink {
+  text-underline-offset: 4px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.contact-module__xwJ-uq__formColumn {
+  background-color: var(--off-white);
+  color: var(--deep-navy);
+  align-items: center;
+  padding: 100px 60px;
+  display: flex;
+}
+
+.contact-module__xwJ-uq__form {
+  width: 100%;
+  max-width: 500px;
+}
+
+.contact-module__xwJ-uq__inputGroup {
+  margin-bottom: 30px;
+}
+
+.contact-module__xwJ-uq__inputGroup label {
+  font-family: var(--font-heading);
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  display: block;
+}
+
+.contact-module__xwJ-uq__inputGroup input, .contact-module__xwJ-uq__inputGroup textarea {
+  width: 100%;
+  font-size: 1rem;
+  font-family: var(--font-body);
+  background: #fff;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.contact-module__xwJ-uq__submitBtn {
+  background-color: var(--berry-red);
+  color: #fff;
+  width: 100%;
+  font-family: var(--font-heading);
+  cursor: pointer;
+  border: none;
+  border-radius: 50px;
+  padding: 20px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  transition: opacity .2s;
+}
+
+.contact-module__xwJ-uq__submitBtn:hover {
+  opacity: .9;
+}
+
+@media (max-width: 900px) {
+  .contact-module__xwJ-uq__splitLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-module__xwJ-uq__textColumn h1 {
+    font-size: 5rem;
+  }
+
+  .contact-module__xwJ-uq__formColumn {
+    padding: 60px 20px;
+  }
+}
+
+/*# sourceMappingURL=app_contact_contact_module_8ac95d54.css.map*/
