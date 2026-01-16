@@ -1,0 +1,59 @@
+/* [project]/app/services/services.module.css [app-client] (css) */
+.services-module__EimPha__servicesPage {
+  background-color: var(--berry-red);
+  min-height: 100vh;
+}
+
+.services-module__EimPha__headerSection {
+  color: #fff;
+  padding: 120px 0 60px;
+}
+
+.services-module__EimPha__pageTitle {
+  margin-bottom: 40px;
+  font-size: 6rem;
+  line-height: .85;
+}
+
+.services-module__EimPha__highlight {
+  -webkit-text-stroke: 2px white;
+  color: #0000;
+  display: block;
+}
+
+.services-module__EimPha__pageSubtitle {
+  opacity: .9;
+  max-width: 600px;
+  font-size: 1.5rem;
+  font-family: var(--font-body);
+}
+
+.services-module__EimPha__servicesGrid {
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  display: grid;
+}
+
+.services-module__EimPha__gridItemLarge, .services-module__EimPha__gridItemSmall {
+  grid-column: span 1;
+}
+
+.services-module__EimPha__gridItemFull {
+  grid-column: span 2;
+}
+
+@media (max-width: 900px) {
+  .services-module__EimPha__servicesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-module__EimPha__gridItemFull, .services-module__EimPha__gridItemLarge, .services-module__EimPha__gridItemSmall {
+    grid-column: span 1;
+  }
+
+  .services-module__EimPha__pageTitle {
+    font-size: 4rem;
+  }
+}
+
+/*# sourceMappingURL=app_services_services_module_css_bad6b30c._.single.css.map*/

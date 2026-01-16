@@ -1,0 +1,75 @@
+/* [project]/components/ServiceCard.module.css [app-client] (css) */
+.ServiceCard-module__km16QW__card {
+  border-radius: var(--radius-lg);
+  flex-direction: column;
+  height: 100%;
+  padding: 40px;
+  transition: transform .3s;
+  display: flex;
+  position: relative;
+}
+
+.ServiceCard-module__km16QW__card:hover {
+  transform: translateY(-5px)rotate(1deg);
+}
+
+.ServiceCard-module__km16QW__dark {
+  background-color: var(--deep-navy);
+  color: #fff;
+}
+
+.ServiceCard-module__km16QW__light {
+  background-color: var(--off-white);
+  color: var(--text-on-light);
+}
+
+.ServiceCard-module__km16QW__lilac {
+  background-color: var(--vibrant-lilac);
+  color: var(--deep-navy);
+}
+
+.ServiceCard-module__km16QW__white {
+  color: var(--deep-navy);
+  background-color: #fff;
+  border: 1px solid #eee;
+}
+
+.ServiceCard-module__km16QW__title {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  line-height: .9;
+}
+
+.ServiceCard-module__km16QW__description {
+  font-family: var(--font-body);
+  opacity: .9;
+  flex-grow: 1;
+  margin-bottom: 40px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.ServiceCard-module__km16QW__header {
+  justify-content: space-between;
+  align-items: flex-start;
+  display: flex;
+}
+
+.ServiceCard-module__km16QW__topIcon {
+  font-family: var(--font-body);
+  border: 1px solid;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  display: flex;
+}
+
+.ServiceCard-module__km16QW__footer {
+  justify-content: flex-end;
+  display: flex;
+}
+
+/*# sourceMappingURL=components_ServiceCard_module_css_bad6b30c._.single.css.map*/

@@ -1,0 +1,64 @@
+/* [project]/components/ClientCarousel.module.css [app-client] (css) */
+.ClientCarousel-module__K7UfJW__carouselContainer {
+  background: #fff;
+  width: 100%;
+  padding: 60px 0;
+  position: relative;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, #0000, #000 10% 90%, #0000);
+  mask-image: linear-gradient(to right, #0000, #000 10% 90%, #0000);
+}
+
+.ClientCarousel-module__K7UfJW__track {
+  gap: 80px;
+  width: max-content;
+  animation: 40s linear infinite ClientCarousel-module__K7UfJW__scroll;
+  display: flex;
+}
+
+.ClientCarousel-module__K7UfJW__clientItem {
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.ClientCarousel-module__K7UfJW__clientName {
+  font-family: var(--font-heading);
+  color: var(--deep-navy);
+  opacity: .4;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 800;
+  transition: opacity .3s, color .3s;
+}
+
+.ClientCarousel-module__K7UfJW__clientItem:hover .ClientCarousel-module__K7UfJW__clientName {
+  opacity: 1;
+  color: var(--brand-blue-end);
+  cursor: default;
+}
+
+@keyframes ClientCarousel-module__K7UfJW__scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-33.33%);
+  }
+}
+
+@media (max-width: 768px) {
+  .ClientCarousel-module__K7UfJW__track {
+    gap: 40px;
+    animation-duration: 20s;
+  }
+
+  .ClientCarousel-module__K7UfJW__clientName {
+    font-size: 1.5rem;
+  }
+}
+
+/*# sourceMappingURL=components_ClientCarousel_module_css_bad6b30c._.single.css.map*/

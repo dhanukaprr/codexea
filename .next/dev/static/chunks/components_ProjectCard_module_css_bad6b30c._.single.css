@@ -1,0 +1,84 @@
+/* [project]/components/ProjectCard.module.css [app-client] (css) */
+.ProjectCard-module__MnOYna__projectCard {
+  border-radius: var(--radius-lg);
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 400px;
+  padding: 40px;
+  text-decoration: none;
+  transition: transform .3s;
+  display: flex;
+}
+
+.ProjectCard-module__MnOYna__projectCard:hover {
+  transform: translateY(-10px);
+}
+
+.ProjectCard-module__MnOYna__dark {
+  background-color: var(--deep-navy);
+  color: #fff;
+}
+
+.ProjectCard-module__MnOYna__lilac {
+  background-color: var(--vibrant-lilac);
+  color: var(--deep-navy);
+}
+
+.ProjectCard-module__MnOYna__light {
+  color: var(--deep-navy);
+  background-color: #fff;
+  border: 1px solid #0000000d;
+}
+
+.ProjectCard-module__MnOYna__cardHeader {
+  justify-content: space-between;
+  align-items: flex-start;
+  display: flex;
+}
+
+.ProjectCard-module__MnOYna__category {
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  opacity: .8;
+  font-size: .9rem;
+  font-weight: 700;
+}
+
+.ProjectCard-module__MnOYna__arrowIcon {
+  border: 1px solid;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  display: flex;
+}
+
+.ProjectCard-module__MnOYna__cardContent h2 {
+  margin-bottom: 24px;
+  font-size: 3rem;
+}
+
+.ProjectCard-module__MnOYna__resultBadge {
+  font-family: var(--font-body);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background: #fff3;
+  border-radius: 50px;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.ProjectCard-module__MnOYna__lilac .ProjectCard-module__MnOYna__resultBadge {
+  background: #0000001a;
+}
+
+.ProjectCard-module__MnOYna__light .ProjectCard-module__MnOYna__resultBadge {
+  background: #f0f0f0;
+}
+
+/*# sourceMappingURL=components_ProjectCard_module_css_bad6b30c._.single.css.map*/

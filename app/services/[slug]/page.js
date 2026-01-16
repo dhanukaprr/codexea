@@ -11,8 +11,9 @@ export async function generateStaticParams() {
     }));
 }
 
-export default function ServiceDetail({ params }) {
-    const service = services.find((s) => s.id === params.slug);
+export default async function ServiceDetail({ params }) {
+    const { slug } = await params;
+    const service = services.find((s) => s.id === slug);
 
     if (!service) {
         notFound();

@@ -1,0 +1,198 @@
+/* [project]/components/Hero.module.css [app-client] (css) */
+.Hero-module__Z8hQ_W__hero {
+  background: var(--gradient-brand-red);
+  color: var(--text-on-dark);
+  flex-direction: column;
+  padding: 180px 0 60px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.Hero-module__Z8hQ_W__navOverlay {
+  font-family: var(--font-body);
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 80px;
+  font-size: .9rem;
+  font-weight: 600;
+  display: flex;
+}
+
+.Hero-module__Z8hQ_W__brand {
+  font-family: var(--font-heading);
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.Hero-module__Z8hQ_W__navLinks {
+  gap: 32px;
+  display: flex;
+}
+
+.Hero-module__Z8hQ_W__navActions {
+  gap: 16px;
+  display: flex;
+}
+
+.Hero-module__Z8hQ_W__btnSmall {
+  color: #fff;
+  cursor: pointer;
+  background: none;
+  border: 1px solid #ffffff4d;
+  border-radius: 50px;
+  padding: 8px 20px;
+}
+
+.Hero-module__Z8hQ_W__btnSmallFilled {
+  color: var(--berry-red);
+  cursor: pointer;
+  background: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 8px 20px;
+  font-weight: 700;
+}
+
+.Hero-module__Z8hQ_W__mainContent {
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  display: flex;
+}
+
+.Hero-module__Z8hQ_W__headline {
+  text-transform: uppercase;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 60px;
+  font-size: 8vw;
+  line-height: .85;
+  display: flex;
+}
+
+.Hero-module__Z8hQ_W__line {
+  white-space: nowrap;
+  align-items: center;
+  gap: 2vw;
+  width: 100%;
+  display: flex;
+}
+
+.Hero-module__Z8hQ_W__iconWrapper {
+  background: none;
+  justify-content: center;
+  align-items: center;
+  width: 7vw;
+  height: 7vw;
+  display: inline-flex;
+}
+
+.Hero-module__Z8hQ_W__inlineIcon {
+  object-fit: contain;
+  filter: drop-shadow(0 10px 20px #0003);
+  width: 100%;
+  height: 100%;
+  transform: rotate(-10deg);
+}
+
+.Hero-module__Z8hQ_W__statsBadge {
+  color: #1a1a1a;
+  font-family: var(--font-body);
+  background: #ff9e0b;
+  border-radius: 20px;
+  gap: 24px;
+  margin-left: auto;
+  padding: 24px;
+  display: flex;
+}
+
+.Hero-module__Z8hQ_W__statItem {
+  flex-direction: column;
+  display: flex;
+}
+
+.Hero-module__Z8hQ_W__statItem strong {
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.Hero-module__Z8hQ_W__statItem span {
+  text-transform: uppercase;
+  opacity: .7;
+  font-size: .7rem;
+  font-weight: 600;
+}
+
+.Hero-module__Z8hQ_W__footerRow {
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  display: flex;
+}
+
+.Hero-module__Z8hQ_W__ctaBtn {
+  background: var(--white);
+  color: var(--berry-red);
+  border-radius: 50px;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 32px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  transition: transform .2s;
+  display: flex;
+}
+
+.Hero-module__Z8hQ_W__ctaBtn:hover {
+  transform: scale(1.05);
+}
+
+.Hero-module__Z8hQ_W__arrow {
+  background: var(--berry-red);
+  color: #fff;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  font-size: 1rem;
+  display: flex;
+}
+
+.Hero-module__Z8hQ_W__subtext {
+  opacity: .8;
+  max-width: 500px;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: var(--font-body);
+}
+
+@media (max-width: 1024px) {
+  .Hero-module__Z8hQ_W__headline {
+    font-size: 10vw;
+  }
+
+  .Hero-module__Z8hQ_W__line {
+    flex-wrap: wrap;
+  }
+
+  .Hero-module__Z8hQ_W__statsBadge {
+    display: none;
+  }
+
+  .Hero-module__Z8hQ_W__footerRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  .Hero-module__Z8hQ_W__navLinks {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=components_Hero_module_css_bad6b30c._.single.css.map*/
