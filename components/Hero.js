@@ -31,7 +31,11 @@ const Hero = () => {
                     <div className={styles.footerRow}>
                         <Link href="/contact" className={styles.ctaBtn}>
                             Get Started
-                            <span className={styles.arrow} fullRounded>↗</span>
+                            <div className={styles.arrow}>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                            </div>
                         </Link>
                         <p className={styles.subtext}>
                             Codexea exists to revolutionize the way brands connect and engage with their audiences in the digital era by leveraging innovative strategies.
