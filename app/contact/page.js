@@ -1,4 +1,5 @@
 import styles from './contact.module.css';
+import ContactForm from './ContactForm';
 
 export const metadata = {
     title: "Contact Codexea",
@@ -26,21 +27,7 @@ export default function Contact() {
                 </div>
 
                 <div className={styles.formColumn}>
-                    <form className={styles.form}>
-                        <div className={styles.inputGroup}>
-                            <label>Name</label>
-                            <input type="text" placeholder="John Doe" />
-                        </div>
-                        <div className={styles.inputGroup}>
-                            <label>Email</label>
-                            <input type="email" placeholder="john@example.com" />
-                        </div>
-                        <div className={styles.inputGroup}>
-                            <label>Message</label>
-                            <textarea rows="4" placeholder="Tell us about your project"></textarea>
-                        </div>
-                        <button type="submit" className={styles.submitBtn}>SEND IT</button>
-                    </form>
+                    <ContactForm />
                 </div>
             </div>
         </div>

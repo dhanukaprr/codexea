@@ -79,6 +79,13 @@
         top: 0;
         width: 100%;
         border-radius: 0;
+        padding: 0 16px;
+        /* Reduced padding from 32px */
+    }
+
+    .container {
+        gap: 20px;
+        /* Ensure spacing between logo and CTA */
     }
 
     .links {

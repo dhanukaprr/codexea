@@ -155,7 +155,12 @@
   .Navbar-module__nuAbfa__navbar {
     border-radius: 0;
     width: 100%;
+    padding: 0 16px;
     top: 0;
+  }
+
+  .Navbar-module__nuAbfa__container {
+    gap: 20px;
   }
 
   .Navbar-module__nuAbfa__links {

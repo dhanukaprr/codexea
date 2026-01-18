@@ -48,12 +48,17 @@
 .ProjectCard-module__MnOYna__arrowIcon {
   border: 1px solid;
   border-radius: 50%;
+  flex-shrink: 0;
   justify-content: center;
   align-items: center;
   width: 40px;
   height: 40px;
-  font-size: 1.5rem;
   display: flex;
+}
+
+.ProjectCard-module__MnOYna__arrowIcon svg {
+  width: 18px;
+  height: 18px;
 }
 
 .ProjectCard-module__MnOYna__cardContent h2 {

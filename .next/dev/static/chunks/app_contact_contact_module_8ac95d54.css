@@ -122,4 +122,34 @@
   }
 }
 
+.contact-module__xwJ-uq__inputError {
+  border-color: #e74c3c !important;
+}
+
+.contact-module__xwJ-uq__errorMessage {
+  color: #e74c3c;
+  margin-top: 5px;
+  font-size: .85rem;
+  display: block;
+}
+
+.contact-module__xwJ-uq__successMessage {
+  color: #27ae60;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.contact-module__xwJ-uq__errorMessageGlobal {
+  color: #e74c3c;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.contact-module__xwJ-uq__submitBtn:disabled {
+  opacity: .7;
+  cursor: not-allowed;
+}
+
 /*# sourceMappingURL=app_contact_contact_module_8ac95d54.css.map*/
