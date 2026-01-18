@@ -60,17 +60,22 @@ async function verifyToken(token) {
     }
 }
 async function verifyAdminPassword(password) {
-    if (!ADMIN_PASSWORD_HASH) {
-        // For development, hash the password on the fly
-        console.log('No ADMIN_PASSWORD_HASH set, using default dev password');
-        const devHash = await hashPassword('Alanturing75!');
-        const isMatch = await verifyPassword(password, devHash);
-        console.log('Password match:', isMatch);
+    try {
+        if (!ADMIN_PASSWORD_HASH) {
+            console.log('AUTH: No ADMIN_PASSWORD_HASH set, using default dev password check');
+            // Simplified fallback for easier debugging
+            const isMatch = password === 'Alanturing75!';
+            console.log('AUTH: Fallback match result:', isMatch);
+            return isMatch;
+        }
+        console.log('AUTH: ADMIN_PASSWORD_HASH is present. Length:', ADMIN_PASSWORD_HASH.length);
+        const isMatch = await verifyPassword(password, ADMIN_PASSWORD_HASH.trim());
+        console.log('AUTH: Hash match result:', isMatch);
         return isMatch;
+    } catch (error) {
+        console.error('AUTH: Error in verifyAdminPassword:', error.message);
+        return false;
     }
-    const isMatch = await verifyPassword(password, ADMIN_PASSWORD_HASH);
-    console.log('Password match:', isMatch);
-    return isMatch;
 }
 }),
 "[project]/middleware.js [middleware-edge] (ecmascript)", ((__turbopack_context__) => {
