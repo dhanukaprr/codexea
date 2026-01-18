@@ -1,76 +1,86 @@
-import fs from 'fs';
-import path from 'path';
-
-const servicesFilePath = path.join(process.cwd(), 'data', 'services.json');
+import sql from '@/lib/db';
 
 /**
- * Read services from JSON file
+ * Read services from Database
  */
-export function getServices() {
+export async function getServices() {
     try {
-        const fileContents = fs.readFileSync(servicesFilePath, 'utf8');
-        return JSON.parse(fileContents);
+        const services = await sql`SELECT * FROM services ORDER BY id ASC`;
+        return services;
     } catch (error) {
-        console.error('Error reading services:', error);
+        console.error('Error reading services from DB:', error);
         return [];
-    }
-}
-
-/**
- * Write services to JSON file
- */
-export function saveServices(services) {
-    try {
-        fs.writeFileSync(servicesFilePath, JSON.stringify(services, null, 4), 'utf8');
-        return true;
-    } catch (error) {
-        console.error('Error saving services:', error);
-        return false;
     }
 }
 
 /**
  * Get a single service by ID
  */
-export function getServiceById(id) {
-    const services = getServices();
-    return services.find(s => s.id === id);
+export async function getServiceById(id) {
+    try {
+        const services = await sql`SELECT * FROM services WHERE id = ${id}`;
+        return services[0] || null;
+    } catch (error) {
+        console.error('Error fetching service by ID:', error);
+        return null;
+    }
 }
 
 /**
  * Add a new service
  */
-export function addService(serviceData) {
-    const services = getServices();
-    // Generate a slug-like id from title if not provided
-    const id = serviceData.id || serviceData.title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-    const newService = { ...serviceData, id };
-    services.push(newService);
-    saveServices(services);
-    return newService;
+export async function addService(serviceData) {
+    try {
+        const { title, description, theme, longDescription, features, benefits } = serviceData;
+
+        // Generate a slug-like id from title if not provided
+        const id = serviceData.id || title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+
+        const result = await sql`
+            INSERT INTO services (id, title, description, theme, long_description, features, benefits)
+            VALUES (${id}, ${title}, ${description}, ${theme}, ${longDescription}, ${features}, ${benefits})
+            RETURNING *
+        `;
+        return result[0];
+    } catch (error) {
+        console.error('Error adding service:', error);
+        return null;
+    }
 }
 
 /**
  * Update an existing service
  */
-export function updateService(id, serviceData) {
-    const services = getServices();
-    const index = services.findIndex(s => s.id === id);
-    if (index === -1) return null;
-
-    services[index] = { ...services[index], ...serviceData, id }; // Ensure id stays same
-    saveServices(services);
-    return services[index];
+export async function updateService(id, serviceData) {
+    try {
+        const { title, description, theme, longDescription, features, benefits } = serviceData;
+        const result = await sql`
+            UPDATE services
+            SET title = ${title}, description = ${description}, theme = ${theme}, 
+                long_description = ${longDescription}, features = ${features}, benefits = ${benefits}
+            WHERE id = ${id}
+            RETURNING *
+        `;
+        return result[0] || null;
+    } catch (error) {
+        console.error('Error updating service:', error);
+        return null;
+    }
 }
 
 /**
  * Delete a service
  */
-export function deleteService(id) {
-    const services = getServices();
-    const filteredServices = services.filter(s => s.id !== id);
-    if (filteredServices.length === services.length) return false;
-
-    saveServices(filteredServices);
-    return true;
+export async function deleteService(id) {
+    try {
+        const result = await sql`
+            DELETE FROM services
+            WHERE id = ${id}
+            RETURNING id
+        `;
+        return result.length > 0;
+    } catch (error) {
+        console.error('Error deleting service:', error);
+        return false;
+    }
 }

@@ -7,7 +7,7 @@ import styles from './serviceDetail.module.css';
 
 export async function generateMetadata({ params }) {
     const { slug } = await params;
-    const service = getServiceById(slug);
+    const service = await getServiceById(slug);
 
     if (!service) {
         return {
@@ -28,7 +28,7 @@ export async function generateMetadata({ params }) {
 }
 
 export async function generateStaticParams() {
-    const services = getServices();
+    const services = await getServices();
     return services.map((service) => ({
         slug: service.id,
     }));
@@ -36,7 +36,7 @@ export async function generateStaticParams() {
 
 export default async function ServiceDetail({ params }) {
     const { slug } = await params;
-    const service = getServiceById(slug);
+    const service = await getServiceById(slug);
 
     if (!service) {
         notFound();

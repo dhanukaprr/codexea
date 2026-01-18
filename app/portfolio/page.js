@@ -11,8 +11,8 @@ export const metadata = {
     description: "Explore our portfolio of successful projects. From e-commerce platforms to brand identity designs, see how Codexea helps businesses grow.",
 };
 
-export default function Portfolio() {
-    const projects = getProjects();
+export default async function Portfolio() {
+    const projects = await getProjects();
     return (
         <div className={styles.portfolioPage}>
             <PageBanner

@@ -11,8 +11,8 @@ export const metadata = {
     description: "Explore our comprehensive digital services including Web Development, SEO, Branding, and UI/UX Design.",
 };
 
-export default function Services() {
-    const services = getServices();
+export default async function Services() {
+    const services = await getServices();
     return (
         <div className={styles.servicesPage}>
             {/* Header Section - Uses Reusable Hero */}

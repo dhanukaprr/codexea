@@ -15,8 +15,8 @@ export const metadata = {
   keywords: "Web Development, Digital Marketing, SEO, Social Media Marketing, Codexea, Sri Lanka, UI/UX Design, Branding",
 };
 
-export default function Home() {
-  const projects = getProjects();
+export default async function Home() {
+  const projects = await getProjects();
   return (
     <>
       <EasterEgg />

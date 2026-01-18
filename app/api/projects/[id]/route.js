@@ -4,7 +4,7 @@ import { revalidatePath } from 'next/cache';
 
 export async function GET(request, { params }) {
     const { id } = await params;
-    const project = getProjectById(id);
+    const project = await getProjectById(id);
 
     if (!project) {
         return NextResponse.json({ error: 'Project not found' }, { status: 404 });
@@ -18,12 +18,13 @@ export async function PUT(request, { params }) {
         const { id } = await params;
         const data = await request.json();
 
-        const updated = updateProject(id, data);
+        const updated = await updateProject(id, data);
         if (!updated) {
             return NextResponse.json({ error: 'Project not found or update failed' }, { status: 404 });
         }
 
         revalidatePath('/portfolio');
+        revalidatePath('/');
         return NextResponse.json(updated);
     } catch (error) {
         return NextResponse.json({ error: 'Failed to update project' }, { status: 500 });
@@ -33,7 +34,7 @@ export async function PUT(request, { params }) {
 export async function DELETE(request, { params }) {
     try {
         const { id } = await params;
-        const success = deleteProject(id);
+        const success = await deleteProject(id);
 
         if (!success) {
             return NextResponse.json({ error: 'Project not found or deletion failed' }, { status: 404 });

@@ -69,3 +69,13 @@ It can also happen if the client has a browser extension installed which messes 
 [00:51:09.031] Server  LOG     ✓ Compiled in 19ms
 [00:55:01.370] Server  LOG     ✓ Compiled in 115ms
 [00:57:35.370] Server  LOG     ✓ Compiled in 107ms
+[01:09:08.432] Server  LOG     ✓ Compiled in 384ms
+[01:09:09.110] Server  ERROR   ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[01:09:09.301] Server  ERROR   ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[01:09:09.811] Server  ERROR   ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[01:09:10.147] Server  ERROR   ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[01:09:10.343] Server  ERROR   ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[01:09:10.527] Server  ERROR   ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[01:09:10.936] Browser ERROR   uncaughtError: Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[01:09:30.813] Server  LOG     ✓ Compiled in 53ms
+[01:09:38.253] Server  LOG     ✓ Compiled in 34ms

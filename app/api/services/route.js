@@ -4,7 +4,7 @@ import { revalidatePath } from 'next/cache';
 
 export async function GET() {
     try {
-        const services = getServices();
+        const services = await getServices();
         return NextResponse.json(services);
     } catch (error) {
         return NextResponse.json({ error: 'Failed to fetch services' }, { status: 500 });
@@ -20,7 +20,7 @@ export async function POST(request) {
             return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
         }
 
-        const newService = addService(data);
+        const newService = await addService(data);
         revalidatePath('/services');
         revalidatePath('/'); // Services also appear on home
 

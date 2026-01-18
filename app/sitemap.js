@@ -1,10 +1,10 @@
 import { getServices } from '@/app/data/services';
 import { getProjects } from '@/app/data/projects';
 
-export default function sitemap() {
+export default async function sitemap() {
     const baseUrl = 'https://codexea.com';
-    const services = getServices();
-    const projects = getProjects();
+    const services = await getServices();
+    const projects = await getProjects();
 
     // Static Routes
     const staticRoutes = [

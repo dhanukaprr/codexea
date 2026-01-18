@@ -4,7 +4,7 @@ import { revalidatePath } from 'next/cache';
 
 export async function GET(request, { params }) {
     const { id } = await params;
-    const service = getServiceById(id);
+    const service = await getServiceById(id);
 
     if (!service) {
         return NextResponse.json({ error: 'Service not found' }, { status: 404 });
@@ -18,7 +18,7 @@ export async function PUT(request, { params }) {
         const { id } = await params;
         const data = await request.json();
 
-        const updated = updateService(id, data);
+        const updated = await updateService(id, data);
         if (!updated) {
             return NextResponse.json({ error: 'Service not found or update failed' }, { status: 404 });
         }
@@ -36,7 +36,7 @@ export async function PUT(request, { params }) {
 export async function DELETE(request, { params }) {
     try {
         const { id } = await params;
-        const success = deleteService(id);
+        const success = await deleteService(id);
 
         if (!success) {
             return NextResponse.json({ error: 'Service not found or deletion failed' }, { status: 404 });

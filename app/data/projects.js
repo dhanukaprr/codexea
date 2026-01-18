@@ -1,78 +1,82 @@
-import fs from 'fs';
-import path from 'path';
-
-const projectsFilePath = path.join(process.cwd(), 'data', 'projects.json');
+import sql from '@/lib/db';
 
 /**
- * Read projects from JSON file
+ * Read projects from Database
  */
-export function getProjects() {
+export async function getProjects() {
     try {
-        const fileContents = fs.readFileSync(projectsFilePath, 'utf8');
-        return JSON.parse(fileContents);
+        const projects = await sql`SELECT * FROM projects ORDER BY id ASC`;
+        return projects;
     } catch (error) {
-        console.error('Error reading projects:', error);
+        console.error('Error reading projects from DB:', error);
+        // Fallback or initialization might be needed here, but usually sytem-wide init is better
         return [];
-    }
-}
-
-/**
- * Write projects to JSON file
- */
-export function saveProjects(projects) {
-    try {
-        fs.writeFileSync(projectsFilePath, JSON.stringify(projects, null, 4), 'utf8');
-        return true;
-    } catch (error) {
-        console.error('Error saving projects:', error);
-        return false;
     }
 }
 
 /**
  * Get a single project by ID
  */
-export function getProjectById(id) {
-    const projects = getProjects();
-    return projects.find(p => p.id === parseInt(id));
+export async function getProjectById(id) {
+    try {
+        const projects = await sql`SELECT * FROM projects WHERE id = ${parseInt(id)}`;
+        return projects[0] || null;
+    } catch (error) {
+        console.error('Error fetching project by ID:', error);
+        return null;
+    }
 }
 
 /**
  * Add a new project
  */
-export function addProject(projectData) {
-    const projects = getProjects();
-    const newId = projects.length > 0 ? Math.max(...projects.map(p => p.id)) + 1 : 1;
-    const newProject = { id: newId, ...projectData };
-    projects.push(newProject);
-    saveProjects(projects);
-    return newProject;
+export async function addProject(projectData) {
+    try {
+        const { client, category, link, theme } = projectData;
+        const result = await sql`
+            INSERT INTO projects (client, category, link, theme)
+            VALUES (${client}, ${category}, ${link}, ${theme})
+            RETURNING *
+        `;
+        return result[0];
+    } catch (error) {
+        console.error('Error adding project:', error);
+        return null;
+    }
 }
 
 /**
  * Update an existing project
  */
-export function updateProject(id, projectData) {
-    const projects = getProjects();
-    const index = projects.findIndex(p => p.id === parseInt(id));
-    if (index === -1) return null;
-
-    projects[index] = { ...projects[index], ...projectData, id: parseInt(id) };
-    saveProjects(projects);
-    return projects[index];
+export async function updateProject(id, projectData) {
+    try {
+        const { client, category, link, theme } = projectData;
+        const result = await sql`
+            UPDATE projects
+            SET client = ${client}, category = ${category}, link = ${link}, theme = ${theme}
+            WHERE id = ${parseInt(id)}
+            RETURNING *
+        `;
+        return result[0] || null;
+    } catch (error) {
+        console.error('Error updating project:', error);
+        return null;
+    }
 }
 
 /**
  * Delete a project
  */
-export function deleteProject(id) {
-    const projects = getProjects();
-    const filteredProjects = projects.filter(p => p.id !== parseInt(id));
-    if (filteredProjects.length === projects.length) return false;
-
-    saveProjects(filteredProjects);
-    return true;
+export async function deleteProject(id) {
+    try {
+        const result = await sql`
+            DELETE FROM projects
+            WHERE id = ${parseInt(id)}
+            RETURNING id
+        `;
+        return result.length > 0;
+    } catch (error) {
+        console.error('Error deleting project:', error);
+        return false;
+    }
 }
-
-// Note: Do not export static projects array as it leads to stale data in server components.
-// Always use getProjects() to ensure you have the latest data from the JSON file.
