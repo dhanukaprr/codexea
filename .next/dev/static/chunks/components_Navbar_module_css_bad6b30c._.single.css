@@ -125,7 +125,7 @@
   }
 
   .Navbar-module__nuAbfa__open span:first-child {
-    transform: rotate(45deg)translate(5px, 6px);
+    transform: translateY(9px)rotate(45deg);
   }
 
   .Navbar-module__nuAbfa__open span:nth-child(2) {
@@ -133,7 +133,7 @@
   }
 
   .Navbar-module__nuAbfa__open span:nth-child(3) {
-    transform: rotate(-45deg)translate(5px, -6px);
+    transform: translateY(-9px)rotate(-45deg);
   }
 
   .Navbar-module__nuAbfa__mobileMenu {

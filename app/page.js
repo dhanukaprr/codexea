@@ -3,6 +3,7 @@ import Hero from '@/components/Hero';
 import ServiceCard from '@/components/ServiceCard';
 import ProjectCard from '@/components/ProjectCard'; // Import ProjectCard
 import ClientCarousel from '@/components/ClientCarousel';
+import EasterEgg from '@/components/EasterEgg'; // Import EasterEgg
 import { projects } from '@/app/data/projects'; // Import projects data
 import styles from './home.module.css';
 
@@ -15,6 +16,7 @@ export const metadata = {
 export default function Home() {
   return (
     <>
+      <EasterEgg />
       <Hero />
 
       <section className={styles.servicesSection}>

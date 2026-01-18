@@ -148,10 +148,9 @@
         transition: all 0.3s ease;
     }
 
-    /* Analyze state changes for 'X' or other effects if desired, 
-       but for now standard burger is fine. Optional active state: */
+    /* Precise symmetrical X transformation */
     .open span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 6px);
+        transform: translateY(9px) rotate(45deg);
     }
 
     .open span:nth-child(2) {
@@ -159,7 +158,7 @@
     }
 
     .open span:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -6px);
+        transform: translateY(-9px) rotate(-45deg);
     }
 
     .mobileMenu {
