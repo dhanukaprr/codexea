@@ -117,7 +117,7 @@ export default function ContactForm() {
             </button>
 
             {status === 'success' && (
-                <p className={styles.successMessage}>Message sent successfully! We'll be in touch.</p>
+                <p className={styles.successMessage}>Message sent successfully! We&apos;ll be in touch.</p>
             )}
             {status === 'error' && (
                 <p className={styles.errorMessageGlobal}>Failed to send message. Please try again or email us directly.</p>

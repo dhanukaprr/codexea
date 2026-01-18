@@ -1,8 +1,10 @@
 import Link from 'next/link';
 import ProjectCard from '@/components/ProjectCard';
-import PageBanner from '@/components/PageBanner'; // Import PageBanner
-import { projects } from '@/app/data/projects';
+import PageBanner from '@/components/PageBanner';
+import { getProjects } from '@/app/data/projects';
 import styles from './portfolio.module.css';
+
+export const dynamic = 'force-dynamic';
 
 export const metadata = {
     title: "Portfolio | Codexea Case Studies & Success Stories",
@@ -10,6 +12,7 @@ export const metadata = {
 };
 
 export default function Portfolio() {
+    const projects = getProjects();
     return (
         <div className={styles.portfolioPage}>
             <PageBanner
@@ -27,7 +30,7 @@ export default function Portfolio() {
 
                     <div className={styles.ctaBox}>
                         <h2>Start Your Project</h2>
-                        <Link href="/contact" className={styles.roundBtn}>Let's Talk</Link>
+                        <Link href="/contact" className={styles.roundBtn}>Let&apos;s Talk</Link>
                     </div>
                 </div>
             </section>

@@ -13,7 +13,7 @@ export default function Contact() {
                 <div className={styles.textColumn}>
                     {/* Left/Top Red Panel */}
                     <div className={styles.infoPanel}>
-                        <h1 className={styles.title}>LET'S TALK</h1>
+                        <h1 className={styles.title}>LET&apos;S TALK</h1>
                         <div className={styles.contactDetails}>
                             <p className={styles.detailItem}>info@codexea.com</p>
                             <p className={styles.detailItem}>+94 77 9175 075</p>

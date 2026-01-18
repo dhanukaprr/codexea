@@ -22,7 +22,7 @@ export default function About() {
                     <div className={styles.missionBox}>
                         <h2>We are the <span className={styles.redText}>architects</span> of the new digital era.</h2>
                         <div className={styles.divider}></div>
-                        <p>Codexea began with a simple idea: that technology should be brilliant, bold, and beautiful. We don't do boring.</p>
+                        <p>Codexea began with a simple idea: that technology should be brilliant, bold, and beautiful. We don&apos;t do boring.</p>
                     </div>
 
                     <div className={styles.teamGrid}>
@@ -46,7 +46,7 @@ export default function About() {
                                     B.Sc. (Hons) in Software Engineering, National School of Business Management (NSBM).
                                 </p>
                                 <p className={styles.description}>
-                                    Dumal leads the company's strategic direction, operations, and technology execution. With hands-on experience in software engineering, web development, and digital design, he drives the development of scalable, user-centric digital solutions while ensuring operational efficiency and technical excellence across all projects.
+                                    Dumal leads the company&apos;s strategic direction, operations, and technology execution. With hands-on experience in software engineering, web development, and digital design, he drives the development of scalable, user-centric digital solutions while ensuring operational efficiency and technical excellence across all projects.
                                 </p>
                             </div>
                         </div>

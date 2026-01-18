@@ -1,7 +1,9 @@
 import Link from 'next/link';
 import PageBanner from '@/components/PageBanner'; // Import PageBanner
 import ServiceCard from '@/components/ServiceCard';
-import { services } from '@/app/data/services';
+import { getServices } from '@/app/data/services';
+
+export const dynamic = 'force-dynamic';
 import styles from './services.module.css';
 
 export const metadata = {
@@ -10,6 +12,7 @@ export const metadata = {
 };
 
 export default function Services() {
+    const services = getServices();
     return (
         <div className={styles.servicesPage}>
             {/* Header Section - Uses Reusable Hero */}

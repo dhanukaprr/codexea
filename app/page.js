@@ -4,7 +4,9 @@ import ServiceCard from '@/components/ServiceCard';
 import ProjectCard from '@/components/ProjectCard'; // Import ProjectCard
 import ClientCarousel from '@/components/ClientCarousel';
 import EasterEgg from '@/components/EasterEgg'; // Import EasterEgg
-import { projects } from '@/app/data/projects'; // Import projects data
+import { getProjects } from '@/app/data/projects';
+
+export const dynamic = 'force-dynamic';
 import styles from './home.module.css';
 
 export const metadata = {
@@ -14,6 +16,7 @@ export const metadata = {
 };
 
 export default function Home() {
+  const projects = getProjects();
   return (
     <>
       <EasterEgg />
@@ -78,7 +81,7 @@ export default function Home() {
             <div className={styles.whyCard}>
               <span className={styles.whyNumber}>01</span>
               <h3>Results Driven</h3>
-              <p>We don't just create; we convert. Every strategy is backed by data and focused on your ROI.</p>
+              <p>We don&apos;t just create; we convert. Every strategy is backed by data and focused on your ROI.</p>
             </div>
             <div className={styles.whyCard}>
               <span className={styles.whyNumber}>02</span>

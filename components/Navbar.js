@@ -58,7 +58,7 @@ const Navbar = () => {
 
                 <div className={styles.rightActions}>
                     <Link href="/contact" className="btn btn-primary" onClick={closeMenu}>
-                        Let's Talk
+                        Let&apos;s Talk
                     </Link>
 
                     {/* Hamburger Button */}

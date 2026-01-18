@@ -1,0 +1,424 @@
+/* [project]/app/codexea-admin/admin.module.css [app-client] (css) */
+.admin-module__kRRZDW__loginPage {
+  background-color: var(--deep-navy);
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.admin-module__kRRZDW__loginCard {
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border-radius: var(--radius);
+  z-index: 2;
+  text-align: center;
+  background: #ffffff08;
+  border: 1px solid #ffffff1a;
+  width: 100%;
+  max-width: 400px;
+  padding: 50px 40px;
+  position: relative;
+  box-shadow: 0 25px 50px -12px #00000080;
+}
+
+.admin-module__kRRZDW__logo {
+  color: #fff;
+  letter-spacing: .1em;
+  margin-bottom: 40px;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.admin-module__kRRZDW__logo span {
+  color: var(--berry-red);
+}
+
+.admin-module__kRRZDW__loginCard h1 {
+  color: #fff;
+  margin-bottom: 12px;
+  font-size: 2rem;
+}
+
+.admin-module__kRRZDW__loginCard p {
+  color: #fff9;
+  margin-bottom: 40px;
+  font-size: .95rem;
+}
+
+.admin-module__kRRZDW__loginForm {
+  text-align: left;
+}
+
+.admin-module__kRRZDW__inputGroup {
+  margin-bottom: 24px;
+}
+
+.admin-module__kRRZDW__inputGroup label {
+  color: #fffc;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  margin-bottom: 10px;
+  font-size: .85rem;
+  font-weight: 600;
+  display: block;
+}
+
+.admin-module__kRRZDW__inputGroup input {
+  color: #fff;
+  background: #ffffff0d;
+  border: 1px solid #ffffff1a;
+  border-radius: 12px;
+  width: 100%;
+  padding: 15px 20px;
+  font-size: 1rem;
+  transition: all .3s;
+}
+
+.admin-module__kRRZDW__inputGroup input:focus {
+  border-color: var(--berry-red);
+  background: #ffffff14;
+  outline: none;
+  box-shadow: 0 0 0 4px #e01e541a;
+}
+
+.admin-module__kRRZDW__errorMessage {
+  color: #ff4d6d;
+  background: #e01e541a;
+  border: 1px solid #e01e5433;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  padding: 12px 15px;
+  font-size: .85rem;
+}
+
+.admin-module__kRRZDW__loginBtn {
+  background: var(--berry-red);
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  width: 100%;
+  padding: 16px;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: all .3s;
+}
+
+.admin-module__kRRZDW__loginBtn:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px #e01e544d;
+}
+
+.admin-module__kRRZDW__loginBtn:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.admin-module__kRRZDW__bgGlow {
+  z-index: 1;
+  background: radial-gradient(circle, #e01e5414 0%, #0000 70%);
+  width: 600px;
+  height: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.admin-module__kRRZDW__dashboardPage {
+  color: #fff;
+  background-color: #0a0a0c;
+  min-height: 100vh;
+  padding: 140px 20px 40px;
+}
+
+.admin-module__kRRZDW__dashboardHeader {
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+.admin-module__kRRZDW__dashboardHeader h1 {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.admin-module__kRRZDW__headerActions {
+  gap: 15px;
+  display: flex;
+}
+
+.admin-module__kRRZDW__addBtn {
+  background: var(--berry-red);
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 600;
+  transition: all .2s;
+}
+
+.admin-module__kRRZDW__logoutBtn {
+  color: #fff9;
+  cursor: pointer;
+  background: none;
+  border: 1px solid #ffffff1a;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 600;
+}
+
+.admin-module__kRRZDW__tabContainer {
+  border-bottom: 1px solid #ffffff0d;
+  gap: 10px;
+  max-width: 1200px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 15px;
+  display: flex;
+}
+
+.admin-module__kRRZDW__tab {
+  color: #fff6;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 5px 0;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: all .2s;
+  position: relative;
+}
+
+.admin-module__kRRZDW__tab:hover {
+  color: #fffc;
+}
+
+.admin-module__kRRZDW__activeTab {
+  color: #fff !important;
+}
+
+.admin-module__kRRZDW__activeTab:after {
+  content: "";
+  background: var(--berry-red);
+  height: 2px;
+  position: absolute;
+  bottom: -16px;
+  left: 0;
+  right: 0;
+}
+
+.admin-module__kRRZDW__projectGrid {
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+}
+
+.admin-module__kRRZDW__adminCard {
+  background: #16161a;
+  border: 1px solid #ffffff0d;
+  border-radius: 16px;
+  padding: 25px;
+  transition: all .2s;
+}
+
+.admin-module__kRRZDW__adminCard:hover {
+  border-color: #ffffff26;
+}
+
+.admin-module__kRRZDW__cardTop {
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.admin-module__kRRZDW__clientInfo h2 {
+  margin-bottom: 4px;
+  font-size: 1.25rem;
+}
+
+.admin-module__kRRZDW__categoryTag {
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: #fff6;
+  font-size: .75rem;
+  font-weight: 700;
+}
+
+.admin-module__kRRZDW__themeBadge {
+  text-transform: uppercase;
+  color: #ffffffb3;
+  background: #ffffff0d;
+  border-radius: 20px;
+  padding: 4px 10px;
+  font-size: .7rem;
+  font-weight: 800;
+}
+
+.admin-module__kRRZDW__cardActions {
+  border-top: 1px solid #ffffff0d;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 20px;
+  display: flex;
+}
+
+.admin-module__kRRZDW__editBtn, .admin-module__kRRZDW__deleteBtn {
+  cursor: pointer;
+  text-align: center;
+  border-radius: 8px;
+  flex: 1;
+  padding: 10px;
+  font-size: .85rem;
+  font-weight: 600;
+  transition: all .2s;
+}
+
+.admin-module__kRRZDW__editBtn {
+  color: #fff;
+  background: #ffffff0d;
+  border: 1px solid #ffffff1a;
+}
+
+.admin-module__kRRZDW__deleteBtn {
+  color: var(--berry-red);
+  background: #e01e540d;
+  border: 1px solid #e01e5433;
+}
+
+.admin-module__kRRZDW__editBtn:hover {
+  background: #ffffff1a;
+}
+
+.admin-module__kRRZDW__deleteBtn:hover {
+  background: #e01e541a;
+}
+
+.admin-module__kRRZDW__modalOverlay {
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+  background: #000c;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: fixed;
+  inset: 0;
+}
+
+.admin-module__kRRZDW__modal {
+  background: #16161a;
+  border: 1px solid #ffffff1a;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 500px;
+  padding: 40px;
+  box-shadow: 0 30px 60px #00000080;
+}
+
+.admin-module__kRRZDW__modal h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.5rem;
+}
+
+.admin-module__kRRZDW__formGroup {
+  margin-bottom: 20px;
+}
+
+.admin-module__kRRZDW__formGroup label {
+  color: #ffffff80;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  font-size: .8rem;
+  font-weight: 700;
+  display: block;
+}
+
+.admin-module__kRRZDW__formGroup input, .admin-module__kRRZDW__formGroup select {
+  color: #fff;
+  background: #ffffff0d;
+  border: 1px solid #ffffff1a;
+  border-radius: 8px;
+  width: 100%;
+  padding: 12px 15px;
+  font-size: .9rem;
+}
+
+.admin-module__kRRZDW__modalActions {
+  gap: 15px;
+  margin-top: 35px;
+  display: flex;
+}
+
+.admin-module__kRRZDW__cancelBtn, .admin-module__kRRZDW__saveBtn {
+  cursor: pointer;
+  border-radius: 8px;
+  flex: 1;
+  padding: 12px;
+  font-weight: 700;
+  transition: all .2s;
+}
+
+.admin-module__kRRZDW__cancelBtn {
+  color: #fff9;
+  background: none;
+  border: 1px solid #ffffff1a;
+}
+
+.admin-module__kRRZDW__saveBtn {
+  background: var(--berry-red);
+  color: #fff;
+  border: none;
+}
+
+.admin-module__kRRZDW__loading {
+  color: #fff;
+  letter-spacing: .1em;
+  background: #0a0a0c;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 1.2rem;
+  display: flex;
+}
+
+@media (max-width: 600px) {
+  .admin-module__kRRZDW__dashboardPage {
+    padding-top: 100px;
+  }
+
+  .admin-module__kRRZDW__dashboardHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .admin-module__kRRZDW__projectGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-module__kRRZDW__modal {
+    margin: 20px;
+    padding: 30px 20px;
+  }
+}
+
+/*# sourceMappingURL=app_codexea-admin_admin_module_ee81847b.css.map*/

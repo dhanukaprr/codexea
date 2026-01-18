@@ -1,4 +1,4 @@
-import { services } from '@/app/data/services';
+import { getServices, getServiceById } from '@/app/data/services';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
@@ -7,7 +7,7 @@ import styles from './serviceDetail.module.css';
 
 export async function generateMetadata({ params }) {
     const { slug } = await params;
-    const service = services.find((s) => s.id === slug);
+    const service = getServiceById(slug);
 
     if (!service) {
         return {
@@ -28,6 +28,7 @@ export async function generateMetadata({ params }) {
 }
 
 export async function generateStaticParams() {
+    const services = getServices();
     return services.map((service) => ({
         slug: service.id,
     }));
@@ -35,7 +36,7 @@ export async function generateStaticParams() {
 
 export default async function ServiceDetail({ params }) {
     const { slug } = await params;
-    const service = services.find((s) => s.id === slug);
+    const service = getServiceById(slug);
 
     if (!service) {
         notFound();
