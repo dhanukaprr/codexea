@@ -71,6 +71,10 @@
     /* Hidden on desktop */
 }
 
+.mobileMenu {
+    display: none;
+}
+
 .link {
     font-weight: 600;
     font-size: 1rem;
@@ -102,10 +106,24 @@
         display: none;
     }
 
+    .logoWrapper {
+        flex-shrink: 0;
+    }
+
     .rightActions {
         display: flex;
         align-items: center;
-        gap: 15px;
+        gap: 12px;
+        flex-shrink: 0;
+    }
+
+    /* Target the Let's Talk button specifically in mobile to reduce size */
+    .rightActions :global(.btn) {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        height: auto;
+        min-height: unset;
+        white-space: nowrap;
     }
 
     .hamburger {

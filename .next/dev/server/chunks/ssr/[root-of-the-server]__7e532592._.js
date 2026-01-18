@@ -455,11 +455,28 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Footer$2e$js__
 ;
 ;
 const metadata = {
-    title: "Codexea | Digital Marketing & Web Development",
-    description: "Results-driven digital solutions specializing in Web Development, Digital Marketing, and UI/UX Design.",
+    metadataBase: new URL('https://codexea.com'),
+    title: {
+        default: "Codexea | Digital Marketing & Web Development",
+        template: "%s | Codexea"
+    },
+    description: "Codexea is a premier digital agency specializing in Web Development, Social Media Marketing, SEO, and Business Automation. We build digital experiences that convert.",
+    openGraph: {
+        type: 'website',
+        locale: 'en_US',
+        url: 'https://codexea.com',
+        siteName: 'Codexea'
+    },
     robots: {
-        index: false,
-        follow: false
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            'max-video-preview': -1,
+            'max-image-preview': 'large',
+            'max-snippet': -1
+        }
     }
 };
 function RootLayout({ children }) {
@@ -470,30 +487,30 @@ function RootLayout({ children }) {
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Navbar$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/app/layout.js",
-                    lineNumber: 33,
+                    lineNumber: 50,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
                     children: children
                 }, void 0, false, {
                     fileName: "[project]/app/layout.js",
-                    lineNumber: 34,
+                    lineNumber: 51,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Footer$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/app/layout.js",
-                    lineNumber: 35,
+                    lineNumber: 52,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/layout.js",
-            lineNumber: 32,
+            lineNumber: 49,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/app/layout.js",
-        lineNumber: 31,
+        lineNumber: 48,
         columnNumber: 5
     }, this);
 }
