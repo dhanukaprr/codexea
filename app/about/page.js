@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import PageBanner from '@/components/PageBanner'; // Import PageBanner
 import styles from './about.module.css';
 
@@ -27,24 +28,53 @@ export default function About() {
                     <div className={styles.teamGrid}>
                         {/* Team Member 1 - Navy Theme */}
                         <div className={`${styles.teamCard} ${styles.navy}`}>
-                            <div className={styles.cardHeader}>
-                                <span className={styles.role}>CEO, Co Founder</span>
-                                <span className={styles.arrow}>→</span>
+                            <div className={styles.imageWrapper}>
+                                <Image
+                                    src="/team/dumal-kanishka.png"
+                                    alt="Dumal Kanishka - CEO"
+                                    width={300}
+                                    height={300}
+                                    className={styles.founderImage}
+                                />
                             </div>
-                            <h3 className={styles.name}>Dumal Kanishka</h3>
+                            <div className={styles.cardContent}>
+                                <h3 className={styles.name}>Dumal Kanishka</h3>
+                                <p className={styles.titles}>
+                                    Chief Executive Officer (CEO) | Director of Operations | Software Engineer | Director of Design & Development
+                                </p>
+                                <p className={styles.education}>
+                                    B.Sc. (Hons) in Software Engineering, National School of Business Management (NSBM).
+                                </p>
+                                <p className={styles.description}>
+                                    Dumal leads the company's strategic direction, operations, and technology execution. With hands-on experience in software engineering, web development, and digital design, he drives the development of scalable, user-centric digital solutions while ensuring operational efficiency and technical excellence across all projects.
+                                </p>
+                            </div>
                         </div>
 
-                        {/* Team Member 2 - Lilac Theme */}
-                        <div className={`${styles.teamCard} ${styles.lilac}`}>
-                            <div className={styles.cardHeader}>
-                                <span className={styles.role}>Co Founder</span>
-                                <span className={styles.arrow}>→</span>
+                        {/* Team Member 2 - Red Theme */}
+                        <div className={`${styles.teamCard} ${styles.red}`}>
+                            <div className={styles.imageWrapper}>
+                                <Image
+                                    src="/team/dhanuka-perera.png"
+                                    alt="Dhanuka Perera - Director of Finance & Marketing"
+                                    width={300}
+                                    height={300}
+                                    className={styles.founderImage}
+                                />
                             </div>
-                            <h3 className={styles.name}>Dhanuka Perera</h3>
+                            <div className={styles.cardContent}>
+                                <h3 className={styles.name}>Dhanuka Perera</h3>
+                                <p className={styles.titles}>
+                                    Director of Finance & Marketing | Business Strategist | Business Analyst & Consultant
+                                </p>
+                                <p className={styles.education}>
+                                    B.Sc. (Hons) in Entrepreneurship (Special), Faculty of Management Studies and Commerce, University of Sri Jayewardenepura.
+                                </p>
+                                <p className={styles.description}>
+                                    Dhanuka oversees finance and marketing strategy, combining analytical insight with business acumen. His expertise in financial planning, market strategy, consulting, and design supports data-driven decision-making, sustainable growth, and strong market positioning.
+                                </p>
+                            </div>
                         </div>
-
-                        {/* Removing 3rd placeholder or keeping it as 'Join Us' if preferred, 
-                but user only specified 2. I will leave just these 2 for accuracy. */}
                     </div>
                 </div>
             </section>

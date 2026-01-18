@@ -48,7 +48,7 @@
 
 .about-module__-i9KWa__teamGrid {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  gap: 30px;
   width: 100%;
   display: grid;
 }
@@ -57,25 +57,93 @@
   border-radius: var(--radius);
   color: #fff;
   flex-direction: column;
-  justify-content: space-between;
-  min-height: 280px;
-  padding: 40px;
+  min-height: 600px;
+  padding: 0;
   transition: transform .3s cubic-bezier(.2, .8, .2, 1);
   display: flex;
   position: relative;
   overflow: hidden;
 }
 
-.about-module__-i9KWa__teamCard h3 {
-  margin-bottom: 8px;
-  font-size: 2.5rem;
+.about-module__-i9KWa__teamCard:hover {
+  transform: translateY(-8px);
 }
 
-.about-module__-i9KWa__teamCard span {
+.about-module__-i9KWa__imageWrapper {
+  background: linear-gradient(135deg, #ffffff1a 0%, #ffffff0d 100%);
+  width: 100%;
+  height: 420px;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-module__-i9KWa__founderImage {
+  object-fit: cover;
+  object-position: center 0%;
+  width: 100%;
+  height: 100%;
+  transform: scale(1.08);
+}
+
+.about-module__-i9KWa__cardContent {
+  flex-direction: column;
+  flex: 1;
+  gap: 16px;
+  padding: 32px;
+  display: flex;
+}
+
+.about-module__-i9KWa__cardHeader {
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  display: flex;
+}
+
+.about-module__-i9KWa__role {
   font-family: var(--font-body);
   text-transform: uppercase;
   letter-spacing: .1em;
+  font-size: .75rem;
   font-weight: 700;
+}
+
+.about-module__-i9KWa__arrow {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.about-module__-i9KWa__name {
+  margin: 0 0 8px;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.about-module__-i9KWa__titles {
+  font-family: var(--font-body);
+  opacity: .95;
+  margin: 0;
+  font-size: .85rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.about-module__-i9KWa__education {
+  font-family: var(--font-body);
+  opacity: .85;
+  margin: 0;
+  font-size: .8rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.about-module__-i9KWa__description {
+  font-family: var(--font-body);
+  opacity: .9;
+  margin: 0;
+  font-size: .9rem;
+  line-height: 1.6;
 }
 
 .about-module__-i9KWa__navy {
@@ -87,8 +155,16 @@
   color: var(--deep-navy) !important;
 }
 
+.about-module__-i9KWa__lilac .about-module__-i9KWa__role, .about-module__-i9KWa__lilac .about-module__-i9KWa__arrow, .about-module__-i9KWa__lilac .about-module__-i9KWa__name, .about-module__-i9KWa__lilac .about-module__-i9KWa__titles, .about-module__-i9KWa__lilac .about-module__-i9KWa__education, .about-module__-i9KWa__lilac .about-module__-i9KWa__description {
+  color: var(--deep-navy);
+}
+
 .about-module__-i9KWa__red {
   background-color: var(--berry-red);
+}
+
+.about-module__-i9KWa__red .about-module__-i9KWa__role, .about-module__-i9KWa__red .about-module__-i9KWa__arrow, .about-module__-i9KWa__red .about-module__-i9KWa__name, .about-module__-i9KWa__red .about-module__-i9KWa__titles, .about-module__-i9KWa__red .about-module__-i9KWa__education, .about-module__-i9KWa__red .about-module__-i9KWa__description {
+  color: #fff;
 }
 
 @media (max-width: 768px) {
@@ -98,6 +174,22 @@
 
   .about-module__-i9KWa__teamGrid {
     grid-template-columns: 1fr;
+  }
+
+  .about-module__-i9KWa__missionBox h2 {
+    font-size: 2.5rem;
+  }
+
+  .about-module__-i9KWa__imageWrapper {
+    height: 250px;
+  }
+
+  .about-module__-i9KWa__cardContent {
+    padding: 24px;
+  }
+
+  .about-module__-i9KWa__name {
+    font-size: 1.75rem;
   }
 }
 
