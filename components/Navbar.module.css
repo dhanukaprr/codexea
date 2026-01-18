@@ -61,6 +61,16 @@
     gap: 40px;
 }
 
+.rightActions {
+    display: flex;
+    align-items: center;
+}
+
+.hamburger {
+    display: none;
+    /* Hidden on desktop */
+}
+
 .link {
     font-weight: 600;
     font-size: 1rem;
@@ -90,5 +100,91 @@
 
     .links {
         display: none;
+    }
+
+    .rightActions {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        z-index: 1001;
+        /* Above menu */
+        padding: 0;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: var(--deep-navy);
+        transition: all 0.3s ease;
+    }
+
+    /* Analyze state changes for 'X' or other effects if desired, 
+       but for now standard burger is fine. Optional active state: */
+    .open span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 6px);
+    }
+
+    .open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .open span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -6px);
+    }
+
+    .mobileMenu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: white;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(-100%);
+        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        padding: 20px;
+    }
+
+    .menuOpen {
+        transform: translateY(0);
+    }
+
+    .mobileLinks {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .mobileLink {
+        font-family: var(--font-heading);
+        font-size: 2rem;
+        font-weight: 800;
+        color: var(--deep-navy);
+        text-decoration: none;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.4s ease 0.1s;
+    }
+
+    .menuOpen .mobileLink {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
