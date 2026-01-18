@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import ProjectCard from '@/components/ProjectCard';
+import PageBanner from '@/components/PageBanner'; // Import PageBanner
 import { projects } from '@/app/data/projects';
 import styles from './portfolio.module.css';
 
@@ -11,12 +12,10 @@ export const metadata = {
 export default function Portfolio() {
     return (
         <div className={styles.portfolioPage}>
-            <section className={styles.headerSection}>
-                <div className="container">
-                    <h1 className={styles.pageTitle}>OUR WORK</h1>
-                    <p className={styles.pageSubtitle}>Results that speak louder than code.</p>
-                </div>
-            </section>
+            <PageBanner
+                title="OUR WORK"
+                subtitle="Results that speak louder than code."
+            />
 
             <section className="section">
                 <div className="container">

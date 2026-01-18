@@ -77,4 +77,20 @@
   display: flex;
 }
 
+@media (max-width: 768px) {
+  .ServiceCard-module__km16QW__card {
+    min-height: auto;
+    padding: 24px;
+  }
+
+  .ServiceCard-module__km16QW__title {
+    font-size: 1.5rem;
+  }
+
+  .ServiceCard-module__km16QW__description {
+    margin-bottom: 24px;
+    font-size: .95rem;
+  }
+}
+
 /*# sourceMappingURL=components_ServiceCard_module_css_bad6b30c._.single.css.map*/

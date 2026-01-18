@@ -1,0 +1,33 @@
+.bannerSection {
+    padding: 120px 0 100px;
+    color: white;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+}
+
+.red {
+    background-color: var(--berry-red);
+}
+
+.navy {
+    background-color: #0a2540;
+}
+
+.title {
+    font-size: 7rem;
+    line-height: 0.9;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    opacity: 0.9;
+    font-family: var(--font-body);
+}
+
+@media (max-width: 900px) {
+    .title {
+        font-size: 3rem;
+    }
+}

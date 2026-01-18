@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import PageBanner from '@/components/PageBanner'; // Import PageBanner
 import styles from './about.module.css';
 
 export const metadata = {
@@ -9,11 +10,11 @@ export const metadata = {
 export default function About() {
     return (
         <div className={styles.aboutPage}>
-            <section className={styles.hero}>
-                <div className="container">
-                    <h1 className={styles.heroTitle}>WHO WE ARE</h1>
-                </div>
-            </section>
+            <PageBanner
+                title="WHO WE ARE"
+                subtitle="Architects of the digital era, crafting bold and beautiful solutions."
+                theme="navy"
+            />
 
             <section className={styles.contentSection}>
                 <div className="container">

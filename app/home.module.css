@@ -157,6 +157,9 @@
 @media (max-width: 900px) {
     .bentoGrid {
         grid-template-columns: 1fr;
+        width: 100%;
+        margin: 0;
+        padding: 0;
     }
 
     .span2,

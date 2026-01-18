@@ -87,3 +87,23 @@
 .light .resultBadge {
     background: #f0f0f0;
 }
+
+@media (max-width: 768px) {
+    .projectCard {
+        padding: 24px;
+        min-height: 300px;
+    }
+
+    .cardContent h2 {
+        font-size: 2rem;
+    }
+
+    .arrowIcon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .category {
+        font-size: 0.8rem;
+    }
+}

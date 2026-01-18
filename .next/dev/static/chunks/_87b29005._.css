@@ -77,6 +77,22 @@
   display: flex;
 }
 
+@media (max-width: 768px) {
+  .ServiceCard-module__km16QW__card {
+    min-height: auto;
+    padding: 24px;
+  }
+
+  .ServiceCard-module__km16QW__title {
+    font-size: 1.5rem;
+  }
+
+  .ServiceCard-module__km16QW__description {
+    margin-bottom: 24px;
+    font-size: .95rem;
+  }
+}
+
 /* [project]/app/services/services.module.css [app-client] (css) */
 .services-module__EimPha__servicesPage {
   background-color: var(--berry-red);

@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/components/PageBanner.module.css"],"sourcesContent":[".bannerSection {\n    padding: 120px 0 100px;\n    color: white;\n    border-bottom-left-radius: 60px;\n    border-bottom-right-radius: 60px;\n}\n\n.red {\n    background-color: var(--berry-red);\n}\n\n.navy {\n    background-color: #0a2540;\n}\n\n.title {\n    font-size: 7rem;\n    line-height: 0.9;\n    margin-bottom: 20px;\n    text-transform: uppercase;\n}\n\n.subtitle {\n    font-size: 1.5rem;\n    opacity: 0.9;\n    font-family: var(--font-body);\n}\n\n@media (max-width: 900px) {\n    .title {\n        font-size: 3rem;\n    }\n}"],"names":[],"mappings":"AAAA;;;;;;;AAOA;;;;AAIA;;;;AAIA;;;;;;;AAOA;;;;;;AAMA;EACI"}}]
+}

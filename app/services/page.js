@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import PageBanner from '@/components/PageBanner'; // Import PageBanner
 import ServiceCard from '@/components/ServiceCard';
 import { services } from '@/app/data/services';
 import styles from './services.module.css';
@@ -11,18 +12,12 @@ export const metadata = {
 export default function Services() {
     return (
         <div className={styles.servicesPage}>
-            {/* Header Section - Matches Hero Style */}
-            <section className={styles.headerSection}>
-                <div className="container">
-                    <h1 className={styles.pageTitle}>
-                        WE DO <br />
-                        <span className={styles.highlight}>EVERYTHING</span>
-                    </h1>
-                    <p className={styles.pageSubtitle}>
-                        From concept to launch, we handle the pixels so you can handle the business.
-                    </p>
-                </div>
-            </section>
+            {/* Header Section - Uses Reusable Hero */}
+            <PageBanner
+                title="WE DO EVERYTHING"
+                subtitle="From concept to launch, we handle the pixels so you can handle the business."
+                theme="navy"
+            />
 
             {/* Grid Section */}
             <section className="section">

@@ -281,6 +281,22 @@
   display: flex;
 }
 
+@media (max-width: 768px) {
+  .ServiceCard-module__km16QW__card {
+    min-height: auto;
+    padding: 24px;
+  }
+
+  .ServiceCard-module__km16QW__title {
+    font-size: 1.5rem;
+  }
+
+  .ServiceCard-module__km16QW__description {
+    margin-bottom: 24px;
+    font-size: .95rem;
+  }
+}
+
 /* [project]/components/ProjectCard.module.css [app-client] (css) */
 .ProjectCard-module__MnOYna__projectCard {
   border-radius: var(--radius-lg);
@@ -367,6 +383,26 @@
 
 .ProjectCard-module__MnOYna__light .ProjectCard-module__MnOYna__resultBadge {
   background: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+  .ProjectCard-module__MnOYna__projectCard {
+    min-height: 300px;
+    padding: 24px;
+  }
+
+  .ProjectCard-module__MnOYna__cardContent h2 {
+    font-size: 2rem;
+  }
+
+  .ProjectCard-module__MnOYna__arrowIcon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .ProjectCard-module__MnOYna__category {
+    font-size: .8rem;
+  }
 }
 
 /* [project]/components/ClientCarousel.module.css [app-client] (css) */
@@ -580,8 +616,15 @@
 }
 
 @media (max-width: 900px) {
-  .home-module__txgM7a__workGrid, .home-module__txgM7a__bentoGrid {
+  .home-module__txgM7a__workGrid {
     grid-template-columns: 1fr;
+  }
+
+  .home-module__txgM7a__bentoGrid {
+    grid-template-columns: 1fr;
+    width: 100%;
+    margin: 0;
+    padding: 0;
   }
 
   .home-module__txgM7a__span2, .home-module__txgM7a__span1 {

@@ -1,0 +1,36 @@
+/* [project]/components/PageBanner.module.css [app-client] (css) */
+.PageBanner-module__C7wuVW__bannerSection {
+  color: #fff;
+  border-bottom-right-radius: 60px;
+  border-bottom-left-radius: 60px;
+  padding: 120px 0 100px;
+}
+
+.PageBanner-module__C7wuVW__red {
+  background-color: var(--berry-red);
+}
+
+.PageBanner-module__C7wuVW__navy {
+  background-color: #0a2540;
+}
+
+.PageBanner-module__C7wuVW__title {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-size: 7rem;
+  line-height: .9;
+}
+
+.PageBanner-module__C7wuVW__subtitle {
+  opacity: .9;
+  font-size: 1.5rem;
+  font-family: var(--font-body);
+}
+
+@media (max-width: 900px) {
+  .PageBanner-module__C7wuVW__title {
+    font-size: 3rem;
+  }
+}
+
+/*# sourceMappingURL=components_PageBanner_module_css_bad6b30c._.single.css.map*/

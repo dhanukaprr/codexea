@@ -86,4 +86,24 @@
   background: #f0f0f0;
 }
 
+@media (max-width: 768px) {
+  .ProjectCard-module__MnOYna__projectCard {
+    min-height: 300px;
+    padding: 24px;
+  }
+
+  .ProjectCard-module__MnOYna__cardContent h2 {
+    font-size: 2rem;
+  }
+
+  .ProjectCard-module__MnOYna__arrowIcon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .ProjectCard-module__MnOYna__category {
+    font-size: .8rem;
+  }
+}
+
 /*# sourceMappingURL=components_ProjectCard_module_css_bad6b30c._.single.css.map*/

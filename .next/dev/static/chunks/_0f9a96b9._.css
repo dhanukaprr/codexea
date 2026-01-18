@@ -86,6 +86,26 @@
   background: #f0f0f0;
 }
 
+@media (max-width: 768px) {
+  .ProjectCard-module__MnOYna__projectCard {
+    min-height: 300px;
+    padding: 24px;
+  }
+
+  .ProjectCard-module__MnOYna__cardContent h2 {
+    font-size: 2rem;
+  }
+
+  .ProjectCard-module__MnOYna__arrowIcon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .ProjectCard-module__MnOYna__category {
+    font-size: .8rem;
+  }
+}
+
 /* [project]/app/portfolio/portfolio.module.css [app-client] (css) */
 .portfolio-module___G9K8W__portfolioPage {
   background-color: var(--off-white);
