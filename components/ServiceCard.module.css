@@ -57,7 +57,6 @@
 }
 
 .topIcon {
-    font-family: var(--font-body);
     border: 1px solid currentColor;
     border-radius: 50%;
     width: 30px;
@@ -65,6 +64,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
+    /* Prevent squishing */
+}
+
+.topIcon svg {
+    width: 14px;
+    height: 14px;
 }
 
 .footer {

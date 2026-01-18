@@ -6,7 +6,8 @@
     flex-direction: column;
     justify-content: space-between;
     transition: transform 0.3s ease;
-    text-decoration: none; /* Ensure link doesn't underline everything */
+    text-decoration: none;
+    /* Ensure link doesn't underline everything */
 }
 
 .projectCard:hover {
@@ -27,7 +28,8 @@
 .light {
     background-color: white;
     color: var(--deep-navy);
-    border: 1px solid rgba(0,0,0,0.05); /* Add subtle border for light card on white bg */
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    /* Add subtle border for light card on white bg */
 }
 
 .cardHeader {
@@ -46,7 +48,6 @@
 }
 
 .arrowIcon {
-    font-size: 1.5rem;
     border: 1px solid currentColor;
     border-radius: 50%;
     width: 40px;
@@ -54,6 +55,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
+    /* Prevent squishing */
+}
+
+.arrowIcon svg {
+    width: 18px;
+    height: 18px;
 }
 
 .cardContent h2 {
