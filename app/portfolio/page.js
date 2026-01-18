@@ -4,8 +4,8 @@ import { projects } from '@/app/data/projects';
 import styles from './portfolio.module.css';
 
 export const metadata = {
-    title: "Portfolio | Codexea Case Studies",
-    description: "See how we've helped businesses grow.",
+    title: "Portfolio | Codexea Case Studies & Success Stories",
+    description: "Explore our portfolio of successful projects. From e-commerce platforms to brand identity designs, see how Codexea helps businesses grow.",
 };
 
 export default function Portfolio() {

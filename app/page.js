@@ -6,6 +6,12 @@ import ClientCarousel from '@/components/ClientCarousel';
 import { projects } from '@/app/data/projects'; // Import projects data
 import styles from './home.module.css';
 
+export const metadata = {
+  title: "Codexea | Digital Marketing Agency & Web Development",
+  description: "Codexea is your partner for digital growth. We specialize in custom Web Development, SEO, Social Media Strategy, and Creative Branding.",
+  keywords: "Web Development, Digital Marketing, SEO, Social Media Marketing, Codexea, Sri Lanka, UI/UX Design, Branding",
+};
+
 export default function Home() {
   return (
     <>

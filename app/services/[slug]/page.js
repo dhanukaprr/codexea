@@ -5,6 +5,28 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import styles from './serviceDetail.module.css';
 
+export async function generateMetadata({ params }) {
+    const { slug } = await params;
+    const service = services.find((s) => s.id === slug);
+
+    if (!service) {
+        return {
+            title: 'Service Not Found | Codexea',
+            description: 'The requested service could not be found.',
+        };
+    }
+
+    return {
+        title: `${service.title} Services | Codexea`,
+        description: service.description,
+        openGraph: {
+            title: `${service.title} Services | Codexea`,
+            description: service.description,
+            // images: ['/images/default-og.jpg'] // Optional if you have explicit images
+        }
+    };
+}
+
 export async function generateStaticParams() {
     return services.map((service) => ({
         slug: service.id,
