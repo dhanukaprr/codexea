@@ -61,18 +61,26 @@ async function verifyToken(token) {
 }
 async function verifyAdminPassword(password) {
     try {
-        console.log('AUTH: Checking password. Input length:', password?.length);
+        console.log('AUTH: Entering verifyAdminPassword. Input length:', password?.length);
         if (!ADMIN_PASSWORD_HASH) {
             console.log('AUTH: No ADMIN_PASSWORD_HASH environment variable detected.');
-            // Fallback to plain text check for easier setup if env var is missing
             const isMatch = password === 'Alanturing75!';
             console.log('AUTH: Simple password match result:', isMatch);
             return isMatch;
         }
-        const trimmedHash = ADMIN_PASSWORD_HASH.trim();
-        console.log('AUTH: ADMIN_PASSWORD_HASH found. Starts with:', trimmedHash.substring(0, 10));
-        console.log('AUTH: Hash total length:', trimmedHash.length);
-        const isMatch = await verifyPassword(password, trimmedHash);
+        let rawHash = ADMIN_PASSWORD_HASH.trim();
+        console.log('AUTH: Initial hash length:', rawHash.length);
+        // Auto-fix if the user copied the label "Key: $2b$..."
+        if (rawHash.includes('$2a$') || rawHash.includes('$2b$')) {
+            const index = rawHash.indexOf('$');
+            if (index > 0) {
+                console.log('AUTH: Prefix detected in hash string, extracting from index:', index);
+                rawHash = rawHash.substring(index);
+            }
+        }
+        console.log('AUTH: Final hash to use (first 10):', rawHash.substring(0, 10));
+        console.log('AUTH: Final hash length:', rawHash.length);
+        const isMatch = await verifyPassword(password, rawHash);
         console.log('AUTH: bcrypt match result:', isMatch);
         return isMatch;
     } catch (error) {
