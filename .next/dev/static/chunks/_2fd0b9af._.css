@@ -137,12 +137,14 @@
 .Hero-module__Z8hQ_W__ctaBtn {
   background: var(--white);
   color: var(--berry-red);
+  white-space: nowrap;
   border-radius: 50px;
   align-items: center;
   gap: 12px;
   padding: 16px 32px;
   font-size: 1.2rem;
   font-weight: 700;
+  text-decoration: none;
   transition: transform .2s;
   display: flex;
 }
@@ -155,12 +157,17 @@
   background: var(--berry-red);
   color: #fff;
   border-radius: 50%;
+  flex-shrink: 0;
   justify-content: center;
   align-items: center;
   width: 30px;
   height: 30px;
-  font-size: 1rem;
   display: flex;
+}
+
+.Hero-module__Z8hQ_W__arrow svg {
+  width: 16px;
+  height: 16px;
 }
 
 .Hero-module__Z8hQ_W__subtext {
@@ -254,14 +261,19 @@
 }
 
 .ServiceCard-module__km16QW__topIcon {
-  font-family: var(--font-body);
   border: 1px solid;
   border-radius: 50%;
+  flex-shrink: 0;
   justify-content: center;
   align-items: center;
   width: 30px;
   height: 30px;
   display: flex;
+}
+
+.ServiceCard-module__km16QW__topIcon svg {
+  width: 14px;
+  height: 14px;
 }
 
 .ServiceCard-module__km16QW__footer {
@@ -319,12 +331,17 @@
 .ProjectCard-module__MnOYna__arrowIcon {
   border: 1px solid;
   border-radius: 50%;
+  flex-shrink: 0;
   justify-content: center;
   align-items: center;
   width: 40px;
   height: 40px;
-  font-size: 1.5rem;
   display: flex;
+}
+
+.ProjectCard-module__MnOYna__arrowIcon svg {
+  width: 18px;
+  height: 18px;
 }
 
 .ProjectCard-module__MnOYna__cardContent h2 {

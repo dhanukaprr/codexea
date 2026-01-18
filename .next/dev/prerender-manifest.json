@@ -1,1 +1,11 @@
-{"version":4,"routes":{"/services/web-development":{},"/services/social-media":{},"/services/graphic-design":{},"/services/seo":{},"/services/business-automation":{},"/services/content-writing":{}},"dynamicRoutes":{"/services/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/services/[slug]","routeRegex":"^\\/services\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"f91a74dff9373eb2f8af1980f61aa607","previewModeSigningKey":"1b9bd3babd3b7167e9ee8b6e71cc58f058400ad9034713ae6a55f396cb0f5f84","previewModeEncryptionKey":"c288d6d593524c9ed4494857ce5350a01f5bf6999f63f1cfdbca60abb41afef7"}}
+{
+  "version": 4,
+  "routes": {},
+  "dynamicRoutes": {},
+  "notFoundRoutes": [],
+  "preview": {
+    "previewModeId": "341813b57c59730fc616c04e238935c3",
+    "previewModeSigningKey": "eaab35b9f486aa0f9ebaa995bb8937c65ab544a671fdf787398d7faf73f2309d",
+    "previewModeEncryptionKey": "23bae580b0eb9af2f165a5ce011f04239f9cb6a4271f2f3ccee6b8d2b8021191"
+  }
+}
