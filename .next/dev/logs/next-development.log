@@ -79,3 +79,9 @@ It can also happen if the client has a browser extension installed which messes 
 [01:09:10.936] Browser ERROR   uncaughtError: Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
 [01:09:30.813] Server  LOG     ✓ Compiled in 53ms
 [01:09:38.253] Server  LOG     ✓ Compiled in 34ms
+[03:45:35.159] Server  LOG       Reload env: .env.local
+[03:45:35.561] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./node_modules/next/dist/client/index.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[03:45:35.578] Server  LOG     ✓ Compiled in 344ms
+[03:45:38.299] Server  ERROR   Error reading projects from DB: NeonDbError: relation "projects" does not exist
+[03:45:38.673] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:45:39.899] Browser WARN    Image with src "/images/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
